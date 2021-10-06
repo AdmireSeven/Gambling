@@ -1,0 +1,12 @@
+<!--pages/game/game.wxml-->
+<view class="contents">
+  <image class="background" src="/assets/background.jpg" mode="aspectFill"/>
+</view>
+<view class="grids">
+  <navigator class="items" url="/pages/one/one">
+    <image class="item1" src="/assets/one.png" mode="aspectFit"/>
+  </navigator>
+  <navigator class="items" url="/pages/multi/multi">
+    <image class="item2" src="/assets/mul.png" mode="aspectFit"/>
+  </navigator>
+</view>

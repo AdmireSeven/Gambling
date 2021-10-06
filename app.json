@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/user/user",
+    "pages/rank/rank",
+    "pages/game/game",
+    "pages/one/one",
+    "pages/multi/multi",
+    "pages/build/build",
+    "pages/addin/addin",
+    "pages/two/two",
+    "pages/three/three",
+    "pages/four/four"
+
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "一起博饼吧",
+    "backgroundColor": "#f8f9fb",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false,
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "backgroundColor": "#f0f0f0",
+    "list": [
+      {
+        "pagePath": "pages/user/user",
+        "text": "规则",
+        "iconPath": "assets/rules.png",
+        "selectedIconPath": "assets/rules-fill.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "游戏中心",
+        "iconPath": "assets/Dice.png",
+        "selectedIconPath": "assets/Dice-fill.png"
+      },
+      {
+        "pagePath": "pages/rank/rank",
+        "text": "我的",
+        "iconPath": "assets/rank.png",
+        "selectedIconPath": "assets/rank-fill.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,12 @@
+<!--pages/multi/multi.wxml-->
+<view class="contents">
+  <image class="background" src="/assets/background.jpg" mode="aspectFill"/>
+  <view class="build">
+    <navigator url="/pages/build/build">
+      <image class="buildimg" src="/assets/build.png" mode="aspectFit"/>
+    </navigator>
+    <navigator url="/pages/addin/addin">
+      <image class="addin" src="/assets/addin.png" mode="aspectFit"/>
+    </navigator>
+  </view>
+</view>

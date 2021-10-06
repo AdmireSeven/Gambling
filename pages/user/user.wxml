@@ -1,0 +1,4 @@
+<!--pages/user/user.wxml-->
+<view class="contents">
+  <image class="background" src="../../assets/rule.jpg" mode="aspectFix"/>
+</view>

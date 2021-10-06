@@ -1,0 +1,11 @@
+<!--pages/index/index.wxml-->
+<view class = "content">
+  <image class = "background" src = "../../assets/home.jpg" mode="aspectFill"/>
+</view>
+<view class="grids">
+  <navigator  url="/pages/game/game">
+    <image class="items" src="/assets/begin.png" mode="aspectFit"/>
+  </navigator>
+</view>
+
+

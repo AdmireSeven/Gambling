@@ -1,0 +1,133 @@
+/* pages/one/one.wxss */
+page {
+  height: 100%;
+}
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.item {
+  color: azure;
+  background-color: tomato;
+  width: 350rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 200rpx;
+  bottom: 400rpx;
+}
+
+.item1 {
+  color: azure;
+  background-color: tomato;
+  width: 350rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 200rpx;
+  bottom: 280rpx;
+}
+
+.bowl {
+  width: 500rpx;
+  height: 500rpx;
+  position: fixed;
+  right: 120rpx;
+  bottom: 550rpx;
+}
+
+.dicegif {
+  width: 400rpx;
+  height: 400rpx;
+  position: fixed;
+  right: 180rpx;
+  bottom: 600rpx;
+  z-index: 1;
+}
+
+.dices1 {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  right: 250rpx;
+  bottom: 750rpx;
+}
+
+.dices2 {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  right: 320rpx;
+  bottom: 740rpx;
+}
+
+.dices3 {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  right: 320rpx;
+  bottom: 850rpx;
+}
+
+.dices4 {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  right: 360rpx;
+  bottom: 680rpx;
+}
+
+.dices5 {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  right: 440rpx;
+  bottom: 730rpx;
+}
+
+.dices6 {
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  right: 430rpx;
+  bottom: 830rpx;
+}
+
+.rank {
+  color:ghostwhite;
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  /*垂直居中 */
+  justify-content: center;
+}
+
+.score {
+  color:ghostwhite;
+  font-size: 30px;
+  font-weight: bold;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sumscore {
+  color: ghostwhite;
+  font-size: 20px;
+  font-weight: bold;
+  word-break: keep-all;
+  /* background-color: tomato; */
+  width: 350rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 180rpx;
+  bottom: 100rpx;
+}

@@ -1,0 +1,4 @@
+<!--pages/addin/addin.wxml-->
+<view class="content">
+  <image class="background" src="/assets/background.jpg" mode="aspectFill"/>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/one/one.wxml-->
+<view class="contents">
+  <image class="background" src="/assets/background.jpg" mode="aspectFill" />
+  <view class="items">
+    <image class="bowl" src="/assets/bowl.png" mode="aspectFill" />
+    <view class="playdices">
+      <image class="dicegif" src="{{img}}" />
+      <button class="item" bindtap="begin">点击开始</button>
+      <image class="dices1" src="{{diceimg[0]}}" mode="aspectFit" />
+      <image class="dices2" src="{{diceimg[1]}}" mode="aspectFit" />
+      <image class="dices3" src="{{diceimg[2]}}" mode="aspectFit" />
+      <image class="dices4" src="{{diceimg[3]}}" mode="aspectFit" />
+      <image class="dices5" src="{{diceimg[4]}}" mode="aspectFit" />
+      <image class="dices6" src="{{diceimg[5]}}" mode="aspectFit" />
+      <view class="result">
+        <text class="rank">{{rank}}</text>
+        <text class="score">{{score}}</text>
+        <text class="sumscore">总积分：{{sumscore}}</text>
+      </view>
+    </view>
+  </view>
+</view>

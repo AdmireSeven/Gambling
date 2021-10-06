@@ -1,0 +1,30 @@
+<!--pages/two/two.wxml-->
+<view class="content">
+  <image class="background" src="/assets/background.jpg" mode="aspectFill" />
+</view>
+<view class="items">
+  <image class="bowl" src="/assets/bowl.png" mode="aspectFill" />
+  <view class="playdices">
+    <image class="dicegif" src="{{img}}" />
+    <image class="people" bindtap="begin1" src="/assets/people1.png" mode="aspectFit" />
+    <image class="peoples" bindtap="beginn" src="/assets/people1.png" mode="aspectFit" />
+    <image class="dices1" src="{{diceimg[0]}}" mode="aspectFit" />
+    <image class="dices2" src="{{diceimg[1]}}" mode="aspectFit" />
+    <image class="dices3" src="{{diceimg[2]}}" mode="aspectFit" />
+    <image class="dices4" src="{{diceimg[3]}}" mode="aspectFit" />
+    <image class="dices5" src="{{diceimg[4]}}" mode="aspectFit" />
+    <image class="dices6" src="{{diceimg[5]}}" mode="aspectFit" />
+    <view class="result">
+      <text class="rank">{{rank}}</text>
+      <text class="score">{{score}}</text>
+      <!-- <text class="sumscore">总积分：{{sumscore}}</text> -->
+    </view>
+    <!-- <view class="result2">
+      <text class="rank2">{{rank2}}</text>
+      <text class="score2">{{score2}}</text>
+    </view> -->
+  </view>
+  <view class="viewranks">
+    <image class="ranks" bindtap="ranks" src="/assets/ranks.png" mode="aspectFit" />
+  </view>
+</view>

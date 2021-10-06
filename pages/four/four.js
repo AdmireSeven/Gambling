@@ -1,0 +1,647 @@
+// pages/four/four.js
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    img: [],
+    rank: "",
+    score: "",
+    sumscore:0,
+    diceimg: [],
+    resultList: [],
+    rank2: "",
+    score2: "",
+    sumscore2:0,
+    rank3: "",
+    score3: "",
+    sumscore3:0,
+    rank4:"",
+    score4:"",
+    sumscore4:0
+  },
+  /**
+   * button 点击开始
+   */
+  begin1: function () {
+    this.setData({
+      img: "/assets/playDice.gif",
+      diceimg: [],
+      rank: "",
+      score: "",
+      rank2:"",
+      score2:""
+    })
+    setTimeout(() => {
+      this.setData({
+        img: "",
+      })
+      var list = [];
+      var listsrc = [];
+      var one = 0; //统计投掷结果
+      var two = 0;
+      var three = 0;
+      var four = 0;
+      var five = 0;
+      var six = 0;
+      var sumscore = this.data.sumscore
+      for (var i = 0; i < 6; i++) {
+        var t = 0 + Math.ceil(Math.random() * 6);
+        list.push(t);
+        if (t == 1) one++;
+        if (t == 2) two++;
+        if (t == 3) three++;
+        if (t == 4) four++;
+        if (t == 5) five++;
+        if (t == 6) six++;
+      }
+      this.setData({
+        resultList: list
+      })
+      for (var i = 0; i < 6; i++) {
+        var dicesrc = "/assets/dice" + this.data.resultList[i] + ".png"
+        listsrc.push(dicesrc)
+      }
+      this.setData({
+        diceimg: listsrc,
+      })
+      var flag = 0;
+      if (one == 1 && two == 1 && three == 1 && four == 1 && five == 1 && six == 1) {
+        this.setData({
+          rank: "对堂",
+          score: "+300",
+          sumscore:sumscore + 300
+        })
+        flag = 1
+      } else {
+        if (four == 1) {
+          this.setData({
+            rank: "一秀",
+            score: "+10",
+            sumscore:sumscore + 10
+          })
+          flag = 1
+        }
+        if (four == 2) {
+          this.setData({
+            rank: "二举",
+            score: "+50",
+            sumscore:sumscore + 50
+          })
+          flag = 1
+        }
+        if (four == 3) {
+          this.setData({
+            rank: "三红",
+            score: "+200",
+            sumscore:sumscore + 200
+          })
+          flag = 1
+        }
+        if (four == 4) {
+          if (one == 2) {
+            this.setData({
+              rank: "状元插金花",
+              score: "+1000",
+              sumscore:sumscore + 1000
+            })
+            flag = 1
+          } else {
+            this.setData({
+              rank: "状元",
+              score: "+500",
+              sumscore:sumscore + 500
+            })
+            flag = 1
+          }
+        }
+        if (four == 6) {
+          this.setData({
+            rank: "六杯红",
+            score: "+500",
+            sumscore:sumscore + 500
+          })
+          flag = 1
+        }
+        if (three == 4) {
+          this.setData({
+            rank: "四进",
+            score: "+100",
+            sumscore:sumscore + 100
+          })
+          flag = 1
+        }
+        if (three == 5) {
+          this.setData({
+            rank: "五王",
+            score: "+500",
+            sumscore:sumscore + 500
+          })
+          flag = 1
+        }
+        if (six == 6) {
+          this.setData({
+            rank: "六杯黑",
+            score: "+500",
+            sumscore:sumscore + 500
+          })
+          flag = 1
+        }
+      }
+      if (flag == 0) {
+        this.setData({
+          rank: "再接再厉哦",
+          score: "+0"
+        })
+      }
+      this.setData({
+        sumscore:this.data.sumscore
+      })
+      // console.log(this.data.resultList)
+      console.log("people1:输出投掷结果:", this.data.rank)
+      console.log("peopel1",this.data.sumscore)
+    }, 1000)
+  },
+  beginn: function () {
+    this.setData({
+      img: "/assets/playDice.gif",
+      diceimg: [],
+      rank: "",
+      score: "",
+      rank2: "",
+      score2: ""
+    })
+    setTimeout(() => {
+      this.setData({
+        img: "",
+      })
+      var list = [];
+      var listsrc = [];
+      var one = 0; //统计投掷结果
+      var two = 0;
+      var three = 0;
+      var four = 0;
+      var five = 0;
+      var six = 0;
+      var sumscore2 = this.data.sumscore2
+      for (var i = 0; i < 6; i++) {
+        var t = 0 + Math.ceil(Math.random() * 6);
+        list.push(t);
+        if (t == 1) one++;
+        if (t == 2) two++;
+        if (t == 3) three++;
+        if (t == 4) four++;
+        if (t == 5) five++;
+        if (t == 6) six++;
+      }
+      this.setData({
+        resultList: list
+      })
+      for (var i = 0; i < 6; i++) {
+        var dicesrc = "/assets/dice" + this.data.resultList[i] + ".png"
+        listsrc.push(dicesrc)
+      }
+      this.setData({
+        diceimg: listsrc,
+      })
+      var flag = 0;
+      if (one == 1 && two == 1 && three == 1 && four == 1 && five == 1 && six == 1) {
+        this.setData({
+          rank2: "对堂",
+          score2: "+300",
+          sumscore2:sumscore2 + 300
+        })
+        flag = 1
+      } else {
+        if (four == 1) {
+          this.setData({
+            rank2: "一秀",
+            score2: "+10",
+            sumscore2:sumscore2 + 10
+          })
+          flag = 1
+        }
+        if (four == 2) {
+          this.setData({
+            rank2: "二举",
+            score2: "+50",
+            sumscore2:sumscore2 + 50
+          })
+          flag = 1
+        }
+        if (four == 3) {
+          this.setData({
+            rank2: "三红",
+            score2: "+200",
+            sumscore2:sumscore2 + 200
+          })
+          flag = 1
+        }
+        if (four == 4) {
+          if (one == 2) {
+            this.setData({
+              rank2: "状元插金花",
+              score2: "+1000",
+              sumscore2:sumscore2 + 1000
+            })
+            flag = 1
+          } else {
+            this.setData({
+              rank2: "状元",
+              score2: "+500",
+              sumscore2:sumscore2 + 500
+            })
+            flag = 1
+          }
+        }
+        if (four == 6) {
+          this.setData({
+            rank2: "六杯红",
+            score2: "+500",
+            sumscore2:sumscore2 + 500
+          })
+          flag = 1
+        }
+        if (three == 4) {
+          this.setData({
+            rank2: "四进",
+            score2: "+100",
+            sumscore2:sumscore2 + 100
+          })
+          flag = 1
+        }
+        if (three == 5) {
+          this.setData({
+            rank2: "五王",
+            score2: "+500",
+            sumscore2:sumscore2 + 500
+          })
+          flag = 1
+        }
+        if (six == 6) {
+          this.setData({
+            rank2: "六杯黑",
+            score2: "+500",
+            sumscore2:sumscore2 + 500
+          })
+          flag = 1
+        }
+      }
+      if (flag == 0) {
+        this.setData({
+          rank2: "再接再厉哦",
+          score2: "+0"
+        })
+      }
+      this.setData({
+        sumscore2:this.data.sumscore2
+      })
+      console.log("people2:输出投掷结果:", this.data.rank2)
+      console.log("people2",this.data.sumscore2)
+    }, 1000)
+  },
+  beginnn: function () {
+    this.setData({
+      img: "/assets/playDice.gif",
+      diceimg: [],
+      rank: "",
+      score: "",
+      rank2: "",
+      score2: "",
+      rank3:"",
+      score3:""
+    })
+    setTimeout(() => {
+      this.setData({
+        img: "",
+      })
+      var list = [];
+      var listsrc = [];
+      var one = 0; //统计投掷结果
+      var two = 0;
+      var three = 0;
+      var four = 0;
+      var five = 0;
+      var six = 0;
+      var sumscore3 = this.data.sumscore3
+      for (var i = 0; i < 6; i++) {
+        var t = 0 + Math.ceil(Math.random() * 6);
+        list.push(t);
+        if (t == 1) one++;
+        if (t == 2) two++;
+        if (t == 3) three++;
+        if (t == 4) four++;
+        if (t == 5) five++;
+        if (t == 6) six++;
+      }
+      this.setData({
+        resultList: list
+      })
+      for (var i = 0; i < 6; i++) {
+        var dicesrc = "/assets/dice" + this.data.resultList[i] + ".png"
+        listsrc.push(dicesrc)
+      }
+      this.setData({
+        diceimg: listsrc,
+      })
+      var flag = 0;
+      if (one == 1 && two == 1 && three == 1 && four == 1 && five == 1 && six == 1) {
+        this.setData({
+          rank3: "对堂",
+          score3: "+300",
+          sumscore3:sumscore3 + 300
+        })
+        flag = 1
+      } else {
+        if (four == 1) {
+          this.setData({
+            rank3: "一秀",
+            score3: "+10",
+            sumscore3:sumscore3 + 10
+          })
+          flag = 1
+        }
+        if (four == 2) {
+          this.setData({
+            rank3: "二举",
+            score3: "+50",
+            sumscore3:sumscore3 + 50
+          })
+          flag = 1
+        }
+        if (four == 3) {
+          this.setData({
+            rank3: "三红",
+            score3: "+200",
+            sumscore3:sumscore3 + 200
+          })
+          flag = 1
+        }
+        if (four == 4) {
+          if (one == 2) {
+            this.setData({
+              rank3: "状元插金花",
+              score3: "+1000",
+              sumscore3:sumscore3 + 1000
+            })
+            flag = 1
+          } else {
+            this.setData({
+              rank3: "状元",
+              score3: "+500",
+              sumscore3:sumscore3 + 500
+            })
+            flag = 1
+          }
+        }
+        if (four == 6) {
+          this.setData({
+            rank3: "六杯红",
+            score3: "+500",
+            sumscore3:sumscore3 + 500
+          })
+          flag = 1
+        }
+        if (three == 4) {
+          this.setData({
+            rank3: "四进",
+            score3: "+100",
+            sumscore3:sumscore3 + 100
+          })
+          flag = 1
+        }
+        if (three == 5) {
+          this.setData({
+            rank3: "五王",
+            score3: "+500",
+            sumscore3:sumscore3 + 500
+          })
+          flag = 1
+        }
+        if (six == 6) {
+          this.setData({
+            rank3: "六杯黑",
+            score3: "+500",
+            sumscore3:sumscore3 + 500
+          })
+          flag = 1
+        }
+      }
+      if (flag == 0) {
+        this.setData({
+          rank3: "再接再厉哦",
+          score3: "+0"
+        })
+      }
+      this.setData({
+        sumscore3:this.data.sumscore3
+      })
+      console.log("people3:输出投掷结果:", this.data.rank3)
+      console.log("people3",this.data.sumscore3)
+    }, 1000)
+  },
+  beginnnn: function () {
+    this.setData({
+      img: "/assets/playDice.gif",
+      diceimg: [],
+      rank: "",
+      score: "",
+      rank2: "",
+      score2: "",
+      rank3:"",
+      score3:"",
+      rank4:"",
+      score:""
+    })
+    setTimeout(() => {
+      this.setData({
+        img: "",
+      })
+      var list = [];
+      var listsrc = [];
+      var one = 0; //统计投掷结果
+      var two = 0;
+      var three = 0;
+      var four = 0;
+      var five = 0;
+      var six = 0;
+      var sumscore4 = this.data.sumscore4
+      for (var i = 0; i < 6; i++) {
+        var t = 0 + Math.ceil(Math.random() * 6);
+        list.push(t);
+        if (t == 1) one++;
+        if (t == 2) two++;
+        if (t == 3) three++;
+        if (t == 4) four++;
+        if (t == 5) five++;
+        if (t == 6) six++;
+      }
+      this.setData({
+        resultList: list
+      })
+      for (var i = 0; i < 6; i++) {
+        var dicesrc = "/assets/dice" + this.data.resultList[i] + ".png"
+        listsrc.push(dicesrc)
+      }
+      this.setData({
+        diceimg: listsrc,
+      })
+      var flag = 0;
+      if (one == 1 && two == 1 && three == 1 && four == 1 && five == 1 && six == 1) {
+        this.setData({
+          rank4: "对堂",
+          score4: "+300",
+          sumscore4:sumscore4 + 300
+        })
+        flag = 1
+      } else {
+        if (four == 1) {
+          this.setData({
+            rank4: "一秀",
+            score4: "+10",
+            sumscore4:sumscore4 + 10
+          })
+          flag = 1
+        }
+        if (four == 2) {
+          this.setData({
+            rank4: "二举",
+            score4: "+50",
+            sumscore4:sumscore4 + 50
+          })
+          flag = 1
+        }
+        if (four == 3) {
+          this.setData({
+            rank4: "三红",
+            score4: "+200",
+            sumscore4:sumscore4 + 200
+          })
+          flag = 1
+        }
+        if (four == 4) {
+          if (one == 2) {
+            this.setData({
+              rank4: "状元插金花",
+              score4: "+1000",
+              sumscore4:sumscore4 + 1000
+            })
+            flag = 1
+          } else {
+            this.setData({
+              rank4: "状元",
+              score4: "+500",
+              sumscore4:sumscore4 + 500
+            })
+            flag = 1
+          }
+        }
+        if (four == 6) {
+          this.setData({
+            rank4: "六杯红",
+            score4: "+500",
+            sumscore4:sumscore4 + 500
+          })
+          flag = 1
+        }
+        if (three == 4) {
+          this.setData({
+            rank4: "四进",
+            score4: "+100",
+            sumscore4:sumscore4 + 100
+          })
+          flag = 1
+        }
+        if (three == 5) {
+          this.setData({
+            rank4: "五王",
+            score4: "+500",
+            sumscore4:sumscore4 + 500
+          })
+          flag = 1
+        }
+        if (six == 6) {
+          this.setData({
+            rank4: "六杯黑",
+            score4: "+500",
+            sumscore4:sumscore4 + 500
+          })
+          flag = 1
+        }
+      }
+      if (flag == 0) {
+        this.setData({
+          rank4: "再接再厉哦",
+          score4: "+0"
+        })
+      }
+      this.setData({
+        sumscore4:this.data.sumscore4
+      })
+      console.log("people4:输出投掷结果:", this.data.rank4)
+      console.log("people4",this.data.sumscore4)
+    }, 1000)
+  },
+  /**
+   * 结束游戏 
+   */
+  rank:function () {
+    
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})
